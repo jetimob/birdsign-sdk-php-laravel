@@ -1,0 +1,63 @@
+{
+    "name": "jetimob/birdsign-sdk-php-laravel",
+    "keywords": [
+        "assinatura digital",
+        "laravel",
+        "sdk",
+        "birdsign"
+    ],
+    "description": "SDK de integração com a BirdSign",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alan Weingartner",
+            "email": "hi@alanwgt.com",
+            "role": "developer"
+        },
+        {
+            "name": "Jetimob",
+            "email": "contato@jetimob.com",
+            "homepage": "https://jetimob.com"
+        }
+    ],
+    "require": {
+        "ext-json": "*",
+        "illuminate/console": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/container": "^6.0 || ^7.0 || ^8.0",
+        "illuminate/support": "^6.0 || ^7.0 || ^8.0",
+        "jetimob/http-php-laravel": "v1.3.2",
+        "php": "^7.4 || ^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.19",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jetimob\\BirdSign\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jetimob\\BirdSign\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jetimob\\BirdSign\\BirdSignServiceProvider"
+            ],
+            "aliases": {
+                "BirdSign": "Jetimob\\BirdSign\\Facades\\BirdSign"
+            }
+        }
+    },
+    "support": {
+        "issues": "https://github.com/jetimob/birdsign-sdk-php-laravel/issues"
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "sort-packages": true
+    }
+}
