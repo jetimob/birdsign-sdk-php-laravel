@@ -190,23 +190,29 @@ return [
 
         // https://hml.birdsign.com.br/oauth/scopes
         'oauth_scopes' => ['complete'],
+    ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Implementação dos endpoints da API
+    |--------------------------------------------------------------------------
+    |
+    | Escolheu-se dar a opção de sobrescrever a implementação de um endpoint para que, se necessário, possam ser
+    | modificados sem a necessidade de alterar o pacote original.
+    |
+    | A única obrigatoriedade é que a classe estenda \Jetimob\BirdSign\Api\AbstractApi.
+    |
+    | Chaves também podem ser adicionadas neste vetor e assim serem chamadas direto da facade.
+    |
+    */
 
-        /*
-        |--------------------------------------------------------------------------
-        | Implementação dos endpoints da API
-        |--------------------------------------------------------------------------
-        |
-        | Escolheu-se dar a opção de sobrescrever a implementação de um endpoint para que, se necessário, possam ser
-        | modificados sem a necessidade de alterar o pacote original.
-        |
-        | A única obrigatoriedade é que a classe estenda \Jetimob\BirdSign\Api\AbstractApi.
-        |
-        | Chaves também podem ser adicionadas neste vetor e assim serem chamadas direto da facade.
-        |
-        */
-        'api_impl' => [
-
-        ],
+    'api_impl' => [
+        'documentGroups' => \Jetimob\BirdSign\Api\DocumentGroups\DocumentGroupsApi::class,
+        'documentMembers' => \Jetimob\BirdSign\Api\DocumentMembers\DocumentMembersApi::class,
+        'documents' => \Jetimob\BirdSign\Api\Documents\DocumentsApi::class,
+        'organizations' => \Jetimob\BirdSign\Api\Organizations\OrganizationsApi::class,
+        'plans' => \Jetimob\BirdSign\Api\Plans\PlansApi::class,
+        'themes' => \Jetimob\BirdSign\Api\Themes\ThemesApi::class,
+        'users' => \Jetimob\BirdSign\Api\Users\UsersApi::class,
     ],
 ];
