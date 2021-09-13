@@ -13,6 +13,8 @@ class DocumentMemberDTO
     protected ?string $email = null;
     protected ?string $cpf = null;
     protected ?string $name = null;
+    protected ?string $birthdate = null;
+    protected ?string $role_title = null;
 
     /**
      * @return int|null
@@ -106,6 +108,44 @@ class DocumentMemberDTO
     public function setName(?string $name): DocumentMemberDTO
     {
         $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getBirthdate(): ?string
+    {
+        return $this->birthdate;
+    }
+
+    /**
+     * @param string|null $birthdate Y-m-d
+     *
+     * @return DocumentMemberDTO
+     */
+    public function setBirthdate(?string $birthdate): DocumentMemberDTO
+    {
+        $this->birthdate = $birthdate;
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getRoleTitle(): ?string
+    {
+        return $this->role_title;
+    }
+
+    /**
+     * @param string|null $role_title Y-m-d
+     *
+     * @return DocumentMemberDTO
+     */
+    public function setRoleTitle(?string $role_title): DocumentMemberDTO
+    {
+        $this->role_title = $role_title;
         return $this;
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Jetimob\BirdSign\Api\DTO;
+namespace Jetimob\BirdSign\Api\Organizations\DTO;
 
 use Jetimob\Http\Traits\Serializable;
 

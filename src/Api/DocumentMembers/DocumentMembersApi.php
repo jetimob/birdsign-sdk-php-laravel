@@ -8,13 +8,13 @@ use Jetimob\BirdSign\Api\AbstractApi;
 use Jetimob\BirdSign\Api\DocumentMembers\DTO\DocumentMemberDTO;
 
 /**
- * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/DocumentMembers
+ * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/DocumentMembers
  */
 class DocumentMembersApi extends AbstractApi
 {
     /**
      * @return DocumentMembersListResponse
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/DocumentMembers/get_documentMembers
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/DocumentMembers/get_documentMembers
      */
     public function list(): DocumentMembersListResponse
     {
@@ -25,7 +25,7 @@ class DocumentMembersApi extends AbstractApi
      * @param DocumentMemberDTO $documentMember
      *
      * @return DocumentMembersResponse
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/DocumentMembers/post_documentMembers
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/DocumentMembers/post_documentMembers
      */
     public function create(DocumentMemberDTO $documentMember): DocumentMembersResponse
     {
@@ -38,7 +38,7 @@ class DocumentMembersApi extends AbstractApi
      * @param int $documentId
      *
      * @return Response
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/DocumentMembers/delete_documentMembers__DocumentMemberId_
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/DocumentMembers/delete_documentMembers__DocumentMemberId_
      */
     public function delete(int $documentId): Response
     {
@@ -49,7 +49,7 @@ class DocumentMembersApi extends AbstractApi
      * @param int $documentId
      *
      * @return DocumentMembersResponse
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/DocumentMembers/get_documentMembers__DocumentMemberId_
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/DocumentMembers/get_documentMembers__DocumentMemberId_
      */
     public function find(int $documentId): DocumentMembersResponse
     {
@@ -61,7 +61,7 @@ class DocumentMembersApi extends AbstractApi
      * @param DocumentMemberDTO $documentMember
      *
      * @return DocumentMembersResponse
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/DocumentMembers/put_documentMembers__DocumentMemberId_
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/DocumentMembers/put_documentMembers__DocumentMemberId_
      */
     public function update(int $documentMemberId, DocumentMemberDTO $documentMember): DocumentMembersResponse
     {
