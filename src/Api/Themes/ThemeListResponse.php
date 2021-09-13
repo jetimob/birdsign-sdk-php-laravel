@@ -6,7 +6,7 @@ use Jetimob\BirdSign\Api\BirdSignResponse;
 use Jetimob\BirdSign\Entity\Theme;
 
 /**
- * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Themes/get_themes
+ * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Themes/get_themes
  */
 class ThemeListResponse extends BirdSignResponse
 {

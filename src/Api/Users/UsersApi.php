@@ -7,13 +7,13 @@ use Jetimob\BirdSign\Api\AbstractApi;
 use Jetimob\BirdSign\Api\Users\DTO\UserDTO;
 
 /**
- * @link https://app.swaggerhub.com/apis/birdsign/BirdSign/1.0.3#/Users
+ * @link https://app.swaggerhub.com/apis/birdsign/BirdSign/1.0.6#/Users
  */
 class UsersApi extends AbstractApi
 {
     /**
      * @return UserResponse
-     * @link https://app.swaggerhub.com/apis/birdsign/BirdSign/1.0.3#/Users/get_user
+     * @link https://app.swaggerhub.com/apis/birdsign/BirdSign/1.0.6#/Users/get_user
      */
     public function authenticatedUser(): UserResponse
     {
@@ -24,7 +24,7 @@ class UsersApi extends AbstractApi
      * @param UserDTO $user
      *
      * @return UserResponse
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Public%20endpoints/post_register
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Public%20endpoints/post_register
      *
      */
     public function register(UserDTO $user): UserResponse

@@ -8,12 +8,12 @@ use Jetimob\BirdSign\Api\AbstractApi;
 use Jetimob\BirdSign\Api\Themes\DTO\ThemeDTO;
 
 /**
- * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Themes
+ * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Themes
  */
 class ThemesApi extends AbstractApi
 {
     /**
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Themes/get_themes
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Themes/get_themes
      * @return ThemeListResponse
      */
     public function list(): ThemeListResponse
@@ -25,7 +25,7 @@ class ThemesApi extends AbstractApi
      * @param ThemeDTO $theme
      *
      * @return ThemeResponse
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Themes/delete_theme__ThemeId_
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Themes/delete_theme__ThemeId_
      */
     public function create(ThemeDTO $theme): ThemeResponse
     {
@@ -38,7 +38,7 @@ class ThemesApi extends AbstractApi
      * @param int $themeId
      *
      * @return ThemeResponse
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Themes/get_theme__ThemeId_
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Themes/get_theme__ThemeId_
      */
     public function find(int $themeId): ThemeResponse
     {
@@ -49,7 +49,7 @@ class ThemesApi extends AbstractApi
      * @param int $themeId
      *
      * @return Response
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Themes/delete_theme__ThemeId_
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Themes/delete_theme__ThemeId_
      */
     public function delete(int $themeId): Response
     {
@@ -61,7 +61,7 @@ class ThemesApi extends AbstractApi
      * @param ThemeDTO $theme
      *
      * @return ThemeResponse
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Themes/put_theme__ThemeId_
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Themes/put_theme__ThemeId_
      */
     public function update(int $themeId, ThemeDTO $theme): ThemeResponse
     {

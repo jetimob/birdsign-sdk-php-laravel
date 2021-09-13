@@ -214,5 +214,6 @@ return [
         'plans' => \Jetimob\BirdSign\Api\Plans\PlansApi::class,
         'themes' => \Jetimob\BirdSign\Api\Themes\ThemesApi::class,
         'users' => \Jetimob\BirdSign\Api\Users\UsersApi::class,
+        'webhooks' => \Jetimob\BirdSign\Api\Webhook\WebhooksApi::class,
     ],
 ];

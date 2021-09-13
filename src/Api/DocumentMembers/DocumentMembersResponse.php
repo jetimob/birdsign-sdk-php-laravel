@@ -6,7 +6,7 @@ use Jetimob\BirdSign\Api\BirdSignResponse;
 use Jetimob\BirdSign\Entity\DocumentMember;
 
 /**
- * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/DocumentMembers
+ * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/DocumentMembers
  */
 class DocumentMembersResponse extends BirdSignResponse
 {

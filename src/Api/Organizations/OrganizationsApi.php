@@ -6,12 +6,12 @@ use GuzzleHttp\RequestOptions;
 use Jetimob\BirdSign\Api\AbstractApi;
 
 /**
- * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Organizations
+ * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Organizations
  */
 class OrganizationsApi extends AbstractApi
 {
     /**
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Organizations/get_organizations
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Organizations/get_organizations
      * @return OrganizationListResponse
      * @throws \JsonException
      * @throws \Throwable

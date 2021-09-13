@@ -22,6 +22,8 @@ class DocumentMember
     protected ?string $cpf = null;
     protected ?string $role_title = null;
     protected ?int $organization_id = null;
+    protected ?string $birthdate = null;
+    protected ?string $phone_number = null;
 
     /**
      * @return int
@@ -140,5 +142,21 @@ class DocumentMember
         }
 
         return 'unknown';
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getBirthdate(): ?string
+    {
+        return $this->birthdate;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getPhoneNumber(): ?string
+    {
+        return $this->phone_number;
     }
 }

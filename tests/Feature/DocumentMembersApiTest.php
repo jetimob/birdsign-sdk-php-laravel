@@ -11,7 +11,8 @@ use Jetimob\BirdSign\Tests\AbstractTestCase;
 class DocumentMembersApiTest extends AbstractTestCase
 {
     protected DocumentMembersApi $api;
-    protected static ?int $docId = null;
+    protected static ?int $groupId = 82;
+    protected static ?int $memberId = null;
 
     protected function setUp(): void
     {
@@ -23,39 +24,38 @@ class DocumentMembersApiTest extends AbstractTestCase
     {
         parent::tearDownAfterClass();
 
-        if (is_null(self::$docId)) {
+        if (is_null(self::$memberId)) {
             return;
         }
 
-        BirdSign::documentMembers()->delete(self::$docId);
+        BirdSign::documentMembers()->delete(self::$memberId);
     }
 
     public function testCreate(): void
     {
-        $response = $this->api->create(DocumentMemberDTO::new(Role::APPROVE, 999, ''));
-        $this->assertSame(200, $response->getStatusCode);
-        self::$docId = $response->getDocumentMember()->getId();
+        $response = $this->api->create(DocumentMemberDTO::new(Role::APPROVE, self::$groupId, 'lucasbeckps@gmail.com'));
+        $this->assertSame(201, $response->getStatusCode());
+        self::$memberId = $response->getDocumentMember()->getId();
     }
 
     public function testFind(): void
     {
-        $response = $this->api->find(80);
-        dump($response->getDocumentMember());
-        $this->assertSame(self::$docId, $response->getStatusCode());
+        $response = $this->api->find(self::$memberId);
+        $this->assertSame(200, $response->getStatusCode());
     }
 
     public function testUpdate(): void
     {
         $newRole = Role::OTHER;
-        $response = $this->api->update(self::$docId, (new DocumentMemberDTO())->setRole($newRole));
+        $response = $this->api->update(self::$memberId, (new DocumentMemberDTO())->setRole($newRole));
         $docMember = $response->getDocumentMember();
         $this->assertSame($newRole, $docMember->getRole());
     }
 
     public function testDelete(): void
     {
-        $response = $this->api->delete(self::$docId);
+        $response = $this->api->delete(self::$memberId);
         $this->assertSame(204, $response->getStatusCode());
-        self::$docId = null;
+        self::$memberId = null;
     }
 }

@@ -9,13 +9,13 @@ use Jetimob\BirdSign\Api\Documents\DTO\DocumentDTO;
 use PhpParser\Comment\Doc;
 
 /**
- * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Documents
+ * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Documents
  */
 class DocumentsApi extends AbstractApi
 {
     /**
      * @return DocumentListResponse
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Documents/get_documents
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Documents/get_documents
      */
     public function list(): DocumentListResponse
     {
@@ -27,7 +27,7 @@ class DocumentsApi extends AbstractApi
      * @param string      $filePath
      *
      * @return DocumentResponse
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Documents/post_documents
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Documents/post_documents
      */
     public function create(DocumentDTO $document, string $filePath): DocumentResponse
     {
@@ -57,7 +57,7 @@ class DocumentsApi extends AbstractApi
      * @param int $documentId
      *
      * @return Response
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Documents/delete_documents__DocumentId_
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Documents/delete_documents__DocumentId_
      */
     public function delete(int $documentId): Response
     {
@@ -68,7 +68,7 @@ class DocumentsApi extends AbstractApi
      * @param int $documentId
      *
      * @return DocumentResponse
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Documents/get_documents__DocumentId_
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Documents/get_documents__DocumentId_
      */
     public function find(int $documentId): DocumentResponse
     {
@@ -80,7 +80,7 @@ class DocumentsApi extends AbstractApi
      * @param DocumentDTO $document
      *
      * @return DocumentResponse
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Documents/put_documents__DocumentId_
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Documents/put_documents__DocumentId_
      */
     public function update(int $documentId, DocumentDTO $document): DocumentResponse
     {

@@ -6,7 +6,7 @@ use Jetimob\BirdSign\Api\BirdSignResponse;
 use Jetimob\BirdSign\Entity\Plan;
 
 /**
- * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Plans/get_plans
+ * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Plans/get_plans
  */
 class PlanListResponse extends BirdSignResponse
 {

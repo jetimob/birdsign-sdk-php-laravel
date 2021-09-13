@@ -2,7 +2,7 @@
 
 namespace Jetimob\BirdSign\Api\Users\DTO;
 
-use Jetimob\BirdSign\Api\DTO\OrganizationDTO;
+use Jetimob\BirdSign\Api\Organizations\DTO\OrganizationDTO;
 use Jetimob\Http\Traits\Serializable;
 
 class UserDTO

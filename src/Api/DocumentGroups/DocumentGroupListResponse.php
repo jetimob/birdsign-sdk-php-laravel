@@ -6,7 +6,7 @@ use Jetimob\BirdSign\Api\BirdSignResponse;
 use Jetimob\BirdSign\Entity\DocumentGroup;
 
 /**
- * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/DocumentGroups/get_documentGroups
+ * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/DocumentGroups/get_documentGroups
  */
 class DocumentGroupListResponse extends BirdSignResponse
 {

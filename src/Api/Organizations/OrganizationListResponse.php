@@ -6,7 +6,7 @@ use Jetimob\BirdSign\Api\BirdSignResponse;
 use Jetimob\BirdSign\Entity\Organization;
 
 /**
- * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Organizations/get_organizations
+ * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Organizations/get_organizations
  */
 class OrganizationListResponse extends BirdSignResponse
 {

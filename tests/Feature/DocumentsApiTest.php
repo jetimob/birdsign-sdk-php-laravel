@@ -10,6 +10,7 @@ use Jetimob\BirdSign\Tests\AbstractTestCase;
 class DocumentsApiTest extends AbstractTestCase
 {
     protected DocumentsApi $api;
+    protected static ?int $groupId = 16;
     protected static ?int $docId = null;
 
     protected function setUp(): void
@@ -32,15 +33,16 @@ class DocumentsApiTest extends AbstractTestCase
     public function testCreate(): void
     {
         $title = 'document title';
-        $documentGroupId = 16;
 
         $response = $this->api->create(
-            DocumentDTO::new($documentGroupId, $title), ''
+            DocumentDTO::new(self::$groupId, $title), './tests/Files/sample.pdf'
         );
         $doc = $response->getDocument();
 
-        $this->assertSame($documentGroupId, $doc->getDocumentGroupId());
+        $this->assertSame(self::$groupId, $doc->getDocumentGroupId());
         $this->assertSame($title, $doc->getTitle());
+
+        self::$docId = $doc->getId();
     }
 
     /**
@@ -66,21 +68,10 @@ class DocumentsApiTest extends AbstractTestCase
         }
 
         foreach ($docs as $doc) {
-            dump($doc);
             $this->assertNotEmpty($doc->getTitle());
             $this->assertNotEmpty($doc->getFileUrl());
             $this->assertIsInt($doc->getDocumentGroupId());
         }
-    }
-
-    /**
-     * @depends testCreate
-     */
-    public function testDelete(): void
-    {
-        $response = $this->api->delete(self::$docId);
-        $this->assertSame(204, $response->getStatusCode());
-        self::$docId = null;
     }
 
     /**
@@ -93,5 +84,15 @@ class DocumentsApiTest extends AbstractTestCase
         $doc = $response->getDocument();
 
         $this->assertSame($title, $doc->getTitle());
+    }
+
+    /**
+     * @depends testCreate
+     */
+    public function testDelete(): void
+    {
+        $response = $this->api->delete(self::$docId);
+        $this->assertSame(204, $response->getStatusCode());
+        self::$docId = null;
     }
 }

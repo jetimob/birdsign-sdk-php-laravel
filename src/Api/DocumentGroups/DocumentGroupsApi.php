@@ -8,13 +8,13 @@ use Jetimob\BirdSign\Api\AbstractApi;
 use Jetimob\BirdSign\Api\DocumentGroups\DTO\DocumentGroupDTO;
 
 /**
- * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/DocumentGroups
+ * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/DocumentGroups
  */
 class DocumentGroupsApi extends AbstractApi
 {
     /**
      * @return DocumentGroupListResponse
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/DocumentGroups/get_documentGroups
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/DocumentGroups/get_documentGroups
      */
     public function list(): DocumentGroupListResponse
     {
@@ -25,7 +25,7 @@ class DocumentGroupsApi extends AbstractApi
      * @param DocumentGroupDTO $document
      *
      * @return DocumentGroupResponse
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/DocumentGroups/post_documentGroups
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/DocumentGroups/post_documentGroups
      */
     public function create(DocumentGroupDTO $document): DocumentGroupResponse
     {
@@ -38,7 +38,7 @@ class DocumentGroupsApi extends AbstractApi
      * @param int $documentGroupId
      *
      * @return Response
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/DocumentGroups/delete_documentGroups__DocumentGroupId_
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/DocumentGroups/delete_documentGroups__DocumentGroupId_
      */
     public function delete(int $documentGroupId): Response
     {
@@ -49,7 +49,7 @@ class DocumentGroupsApi extends AbstractApi
      * @param int $documentGroupId
      *
      * @return DocumentGroupResponse
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/DocumentGroups/get_documentGroups__DocumentGroupId_
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/DocumentGroups/get_documentGroups__DocumentGroupId_
      */
     public function find(int $documentGroupId): DocumentGroupResponse
     {
@@ -61,7 +61,7 @@ class DocumentGroupsApi extends AbstractApi
      * @param DocumentGroupDTO $document
      *
      * @return DocumentGroupResponse
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/DocumentGroups/put_documentGroups__DocumentGroupId_
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/DocumentGroups/put_documentGroups__DocumentGroupId_
      */
     public function update(int $documentGroupId, DocumentGroupDTO $document): DocumentGroupResponse
     {
@@ -74,7 +74,7 @@ class DocumentGroupsApi extends AbstractApi
      * @param int $documentGroupId
      *
      * @return DocumentGroupResponse
-     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/DocumentGroups/post_documentGroups__DocumentGroupId__sign
+     * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/DocumentGroups/post_documentGroups__DocumentGroupId__sign
      */
     public function sign(int $documentGroupId): DocumentGroupResponse
     {

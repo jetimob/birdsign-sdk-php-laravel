@@ -9,6 +9,7 @@ use Jetimob\BirdSign\Api\Organizations\OrganizationsApi;
 use Jetimob\BirdSign\Api\Plans\PlansApi;
 use Jetimob\BirdSign\Api\Themes\ThemesApi;
 use Jetimob\BirdSign\Api\Users\UsersApi;
+use Jetimob\BirdSign\Api\Webhook\WebhooksApi;
 use Jetimob\BirdSign\Exception\RuntimeException;
 use Jetimob\Http\Contracts\HttpProviderContract;
 use Jetimob\Http\Http;
@@ -24,6 +25,7 @@ use Jetimob\Http\Http;
  * @method DocumentsApi documents()
  * @method DocumentMembersApi documentMembers()
  * @method OrganizationsApi organizations()
+ * @method WebhooksApi webhooks()
  */
 class BirdSign implements HttpProviderContract
 {

@@ -6,7 +6,7 @@ use Jetimob\BirdSign\Api\BirdSignResponse;
 use Jetimob\BirdSign\Entity\Document;
 
 /**
- * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.3#/Documents
+ * @link https://app.swaggerhub.com/apis-docs/birdsign/BirdSign/1.0.6#/Documents
  */
 class DocumentResponse extends BirdSignResponse
 {
