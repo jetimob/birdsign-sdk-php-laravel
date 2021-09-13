@@ -11,7 +11,7 @@ use Jetimob\BirdSign\Tests\AbstractTestCase;
 class DocumentGroupsApiTest extends AbstractTestCase
 {
     protected DocumentGroupsApi $api;
-    protected static ?int $documentId = null;
+    protected static ?int $groupId = null;
 
     protected function setUp(): void
     {
@@ -23,11 +23,11 @@ class DocumentGroupsApiTest extends AbstractTestCase
     {
         parent::tearDownAfterClass();
 
-        if (is_null(self::$documentId)) {
+        if (is_null(self::$groupId)) {
             return;
         }
 
-        BirdSign::documentGroups()->delete(self::$documentId);
+        BirdSign::documentGroups()->delete(self::$groupId);
     }
 
     public function testList(): void
@@ -42,7 +42,6 @@ class DocumentGroupsApiTest extends AbstractTestCase
 
         foreach ($docs as $doc) {
             $this->assertInstanceOf(DocumentGroup::class, $doc);
-            dump($doc);
         }
     }
 
@@ -57,27 +56,16 @@ class DocumentGroupsApiTest extends AbstractTestCase
         $doc = $response->getDocumentGroup();
         $this->assertSame($title, $doc->getTitle());
 
-        dump($doc);
-        self::$documentId = $doc->getId();
+        self::$groupId = $doc->getId();
     }
 
     /**
      */
     public function testFind(): void
     {
-        $response = $this->api->find(82);
+        $response = $this->api->find(self::$groupId);
         $doc = $response->getDocumentGroup();
-        $this->assertSame(82, $doc->getId());
-        dump($doc);
-    }
-
-    /**
-     * @depends testCreate
-     */
-    public function testDelete(): void
-    {
-        $response = $this->api->delete(self::$documentId);
-        $this->assertSame(204, $response->getStatusCode());
+        $this->assertSame(self::$groupId, $doc->getId());
     }
 
     /**
@@ -87,17 +75,28 @@ class DocumentGroupsApiTest extends AbstractTestCase
     {
         $title = 'updated_name';
 
-        $response = $this->api->update(self::$documentId, (new DocumentGroupDTO())->setTitle($title));
+        $response = $this->api->update(self::$groupId, (new DocumentGroupDTO())->setTitle($title));
         $doc = $response->getDocumentGroup();
 
         $this->assertSame($title, $doc->getTitle());
     }
 
+    /**
+     * @depends testCreate
+     */
     public function testSign(): void
     {
-        $response = $this->api->sign(82);
-        $doc = $response->getDocumentGroup();
+        $response = $this->api->sign(self::$groupId);
+        $this->assertSame(200, $response->getStatusCode());
+    }
 
-        dump($doc);
+    /**
+     * @depends testCreate
+     */
+    public function testDelete(): void
+    {
+        $response = $this->api->delete(self::$groupId);
+        $this->assertSame(204, $response->getStatusCode());
+        self::$groupId = null;
     }
 }
